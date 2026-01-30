@@ -7,14 +7,14 @@ WORKDIR /app
 
 # Install dependencies
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 # Copy source
 COPY . .
 # Build the application
-RUN npm run build
+# RUN npm run build
 
-EXPOSE 5173
+EXPOSE 3000
 
 CMD ["npm", "run", "dev"]
 
